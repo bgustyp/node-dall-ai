@@ -50,7 +50,7 @@ export class Dalle {
       const { data } = response;
       const taskId: string = data.id;
       const refreshIntervalId = setInterval(async () => {
-        const response = await axios.get(`${this.url}/${taskId}`, {
+        const response = await axios.get(`${this.url}/tasks/${taskId}`, {
           headers: {
             Authorization: `Bearer ${this.apiKey}`,
             "Content-Type": "application/json",
